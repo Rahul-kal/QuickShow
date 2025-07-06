@@ -48,7 +48,7 @@ const syncUserUpdation = inngest.createFunction(
 )
 
 //create an empty array where we'll export future inngest functions
-export const Functions = [
+export const functions = [
         syncUserCreation,
         syncUserDeletion,
         syncUserUpdation
