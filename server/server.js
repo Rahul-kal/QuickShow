@@ -28,15 +28,15 @@ app.use((req, res, next) => {
 
 
 // API Routes
-//app.get('/', (req, res) => res.send('Server is Live!'));
-app.get('/', (req, res) => {
-  if (req.query.__clerk_handshake) {
-    // Let Clerk handle the handshake
-    res.status(200).send('Clerk handshake acknowledged');
-  } else {
-    res.send('Server is Live!');
-  }
-});
+app.get('/', (req, res) => res.send('Server is Live!'));
+// app.get('/', (req, res) => {
+//   if (req.query.__clerk_handshake) {
+//     // Let Clerk handle the handshake
+//     res.status(200).send('Clerk handshake acknowledged');
+//   } else {
+//     res.send('Server is Live!');
+//   }
+// });
 
 app.use('/api/inngest', serve({ client: inngest, functions }));
 
